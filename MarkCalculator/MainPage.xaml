@@ -6,9 +6,27 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="504.25" Width="349.25" HorizontalAlignment="Center" VerticalAlignment="Center">
 
-    <Grid>
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="462" Width="339">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Center" Margin="0,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="167" SelectionChanged="TextBlock_SelectionChanged"><Run FontWeight="Bold" Text="Noroff Mark Calculator"/></TextBlock>
+        <TextBox x:Name="numberOfWeeks" HorizontalAlignment="Left" Margin="243,102,0,0" Text="" VerticalAlignment="Top" Height="32" Width="70"/>
+        <TextBox x:Name="numberOfTaps" HorizontalAlignment="Left" Margin="242,50,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.078,0.476" Height="32" Width="70"/>
+        <TextBox x:Name="onlineTestScore" HorizontalAlignment="Left" Margin="243,152,0,0" Text="" VerticalAlignment="Top" Height="32" Width="70"/>
+        <TextBox x:Name="assesmentScore" HorizontalAlignment="Left" Margin="243,201,0,0" Text="" VerticalAlignment="Top" Height="32" Width="70"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,108,0,0" Text="Number of weeks in the course:" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="217"/>
+        <TextBlock HorizontalAlignment="Right" Margin="0,56,116,0" Text="Number of TAPs passed:" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="162"/>
+        <TextBlock HorizontalAlignment="Left" Margin="107,158,0,0" Text="Online test score:" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="123"/>
+        <TextBlock HorizontalAlignment="Left" Margin="115,207,0,0" Text="Assement score:" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="113"/>
+        <Button Content="Calculate Score" HorizontalAlignment="Left" Margin="100,278,0,0" VerticalAlignment="Top" Height="32" Width="122" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="83,339,0,0" Text="Total score:" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="78"/>
+        <TextBlock HorizontalAlignment="Left" Margin="124,374,0,0" Text="Mark:" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="37"/>
+        <TextBlock x:Name="totalScoreText" HorizontalAlignment="Left" Margin="170,339,0,0" Text="Score" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="37"/>
+        <TextBlock x:Name="totalMark" HorizontalAlignment="Left" Margin="169,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="386" Grid.ColumnSpan="2"><Run FontWeight="Bold" Text="Mark"/></TextBlock>
 
     </Grid>
 </Page>
